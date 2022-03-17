@@ -1,3 +1,26 @@
 h1 {
   color: #F2FA5A;
 }
+
+dt{
+  color: #E15FED;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 40px;
+}
+
+dd {
+  margin-bottom: 14px;
+}
+
+a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+a:hover {
+  color:#6EBF8B;
+  font-weight: bold;
+  text-decoration: none;
+
+}
