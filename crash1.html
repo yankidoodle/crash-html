@@ -130,6 +130,12 @@
       </p>
 
       <form action="https://httpbin.org/get" method="get">
+        <!-- Add Semantics to a form section with fieldset and legend -->
+        <fieldset>
+          <legend>
+            Personal Information
+          </legend>
+        </fieldset>
         <p>
           <label for="firstName">First Name</label>
           <input type="text" name="firstName" id="firstName" placeholder="Pedro" autocomplete="on" autofocus required />
@@ -147,9 +153,130 @@
         </p>
 
         <p>
-          <label for="password">Phone Number</label>
-          <input type="password" name="password" id="password" placeholder="Enter a password" required />
+          <label for="phone">Phone Number</label>
+          <input type="tel" name="phone" id="phone" placeholder="Leave your digits"
+          pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+          required />
         </p>
+
+        <p>
+          <label for="decade">favorite decade</label>
+          <input type="number" name="decade" id="decade" min="1950"
+          max="2020" step="10" value="1996"
+          required />
+        </p>
+
+        <p>
+          <label for="coffee">favorite coffee</label>
+          <select name="coffee" id="coffee">
+
+            <optgroup label="Coffees">
+
+              <option value="regular coffee">
+                Regular Coffee
+              </option>
+
+              <option value="iced coffee">
+                Iced Coffee
+              </option>
+
+            </optgroup>
+
+            <optgroup label="Espresso Drinks">
+              <option value="flat white">
+                Flat White
+              </option>
+
+              <option value="macchiato">
+                Caffè Macchiato
+              </option>
+
+              <option value="cafe breve">
+                  Cafe Breve
+              </option>
+
+              <option value="ristretto">
+                  Ristretto
+              </option>
+            </optgroup>
+
+            <option value="latte">
+              Latte
+            </option>
+
+            <option value="capuccino">
+              Cappucino
+            </option>
+
+          </select>
+        </p>
+        <br />
+
+        <!-- Form Section 2-->
+        <fieldset>
+          <legend>
+            What is your favorite food?
+          </legend>
+
+          <p>
+            <input type="radio" name="food" id="tacos" value="tacos" />
+            <label for="tacos">Tacos</label>
+          </p>
+
+          <p>
+            <input type="radio" name="food" id="hamburger" value="hamburger" />
+            <label for="hamburger">Hamburger</label>
+          </p>
+
+          <p>
+            <input type="radio" name="food" id="ramen" value="ramen" />
+            <label for="ramen">Ramen</label>
+          </p>
+
+        </fieldset>
+        <br />
+
+        <!-- Form Section 3 - Checkbox -->
+        <fieldset>
+          <legend>
+            Do you have pets?
+          </legend>
+
+          <p>
+            <input type="checkbox" name="pets" id="dog" value="dog" />
+            <label for="dog">Dog</label>
+          </p>
+
+          <p>
+            <input type="checkbox" name="pets" id="unicorn" value="unicorn" />
+            <label for="unicorn">Unicorn</label>
+          </p>
+
+          <p>
+            <input type="checkbox" name="pets" id="otherPet" value="otherPet" />
+            <label for="otherPet">Others</label>
+          </p>
+
+        </fieldset>
+        <br />
+
+        <fieldset>
+          <legend>
+            Send me a Note
+          </legend>
+          <label for="message">Your Message:</label>
+          <br />
+          <textarea name="message" id="message" cols="30" rows="10"
+          placeholder="Enter your message here">
+            Enter your message here
+          </textarea>
+        </fieldset>
+        <br />
+
+        <button type="submit">Submit</button>
+        <button type="submit" formaction="https://httpbin.org/post"
+        formmethod="post">Post Form</button>
+        <button type="reset">Reset</button>
 
       </form>
 
